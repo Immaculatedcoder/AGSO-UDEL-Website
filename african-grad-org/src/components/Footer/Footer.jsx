@@ -20,8 +20,16 @@ function Footer() {
                     <div>
                         <h3> Quick Links</h3>
                         <ul>
-                            
+
                         </ul>
+                    </div>
+
+                    {/* Connect */}
+                    <div>
+                        <h3> Connect With Us</h3>
+                        <div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
