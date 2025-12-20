@@ -1,6 +1,16 @@
 import React from "react";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Footer() {
+
+    const quickLinks = [
+        {id:1, name: "Home", href: "/"},
+        {id:2, name: "About Us", href: "/about"},
+        {id:3, name: "Leadership", href: "/leadership"},
+        {id:4, name: "Events", href: "#events"}
+    ];
+
+
     return (
         <footer>
             <div>
@@ -28,7 +38,7 @@ function Footer() {
                     <div>
                         <h3> Connect With Us</h3>
                         <div>
-                            
+                            <a href="#"> <InstagramIcon /></a>
                         </div>
                     </div>
                 </div>
