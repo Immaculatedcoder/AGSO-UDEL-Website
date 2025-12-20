@@ -30,7 +30,9 @@ function Header() {
                         {/* Brand */}
                         <div>
                             <h1> AFRICAN GRADUATE STUDENT ORGANIZATION</h1>
-                            <p> University of Delaware</p>
+                            <a href="https://www.udel.edu/" style={{textDecoration: "none", color: "inherit"}}> 
+                                <p> University of Delaware</p> 
+                            </a> 
                         </div>
                     </a>
 
