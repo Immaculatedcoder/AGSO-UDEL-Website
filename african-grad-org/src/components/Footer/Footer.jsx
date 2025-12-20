@@ -3,6 +3,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Footer() {
+    const currentYear = new Date().getFullYear();
 
     const quickLinks = [
         {id:1, name: "Home", href: "/"},
@@ -48,6 +49,13 @@ function Footer() {
                             <a href="#"> <InstagramIcon /></a>
                             <a href="#"> <WhatsAppIcon /></a>
                         </div>
+                    </div>
+
+                    {/* Divider */}
+                    <div>
+                        <p>
+                            © {currentYear} African Graduate Student Organization. All rights reserved.
+                        </p>
                     </div>
                 </div>
             </div>
