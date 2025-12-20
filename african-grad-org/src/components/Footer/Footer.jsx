@@ -1,5 +1,6 @@
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Footer() {
 
@@ -30,7 +31,13 @@ function Footer() {
                     <div>
                         <h3> Quick Links</h3>
                         <ul>
-
+                            {quickLinks.map(links => {
+                                return (
+                                    <li key={links.id}>
+                                        <a href={links.href}> {links.name}</a>
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </div>
 
@@ -39,6 +46,7 @@ function Footer() {
                         <h3> Connect With Us</h3>
                         <div>
                             <a href="#"> <InstagramIcon /></a>
+                            <a href="#"> <WhatsAppIcon /></a>
                         </div>
                     </div>
                 </div>

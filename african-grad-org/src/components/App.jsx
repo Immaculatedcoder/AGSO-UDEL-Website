@@ -1,13 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
 import Header from './Header/Header'
+import Footer from './Footer/Footer';
 
 
 
 function App() {
   return (
-  <Header />
-  
+    <div>
+      <Header />
+      <Footer />
+    </div>
   );
 }
 
