@@ -135,6 +135,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-left: 1rem;
   }
 }
 
@@ -186,6 +187,12 @@
   border-radius: 5px;
 
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .header__cta-button {
+    width: auto;
+  }
 }
 
 .header__cta-button:hover {
