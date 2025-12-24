@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import agsoLogo from "../../assets/images/AGSO_UD.svg";
+import agsoLogo from "../../assets/images/agsoLogo.svg";
+import "./Header.css";
 
 function Header() {
   const navItems = [
@@ -12,20 +13,20 @@ function Header() {
   ];
 
   return (
-    <header>
-      <div>
-        <div>
+    <header className="header">
+      <div className="container header__container">
+        <div className="header__items">
           {/* Logo and Brand! */}
-          <div>
+          <div className="header__logoBrand">
             {/* Logo! */}
-            <div>
+            <div className="header__logo">
               <Link to="/">
-                <img src={agsoLogo} alt="AGSO University of Delaware" />{" "}
+                <img src={agsoLogo} alt="AGSO University of Delaware" />
               </Link>
             </div>
             {/* Brand */}
-            <div>
-              <Link to="/">
+            <div className="header__brand">
+              <Link to="/" style={{ textDecoration: "none" }}>
                 <h1> AFRICAN GRADUATE STUDENT ORGANIZATION</h1>{" "}
               </Link>
               <a
@@ -44,20 +45,26 @@ function Header() {
                         })}
                     </nav> */}
 
-          <nav>
+          <nav className="header__nav">
             {navItems.map((item) => {
               return (
-                <NavLink key={item.id} to={item.href}>
-                  {" "}
-                  {item.name}{" "}
+                <NavLink
+                  key={item.id}
+                  to={item.href}
+                  className="header__nav-link"
+                >
+                  {item.name}
                 </NavLink>
               );
             })}
           </nav>
 
           {/* CTA Button */}
-          <div>
-            <NavLink to="/contact"> Join AGSO</NavLink>
+          <div className="header__cta">
+            <NavLink to="/contact" className="header__cta-button">
+              {" "}
+              Join AGSO
+            </NavLink>
           </div>
         </div>
       </div>
