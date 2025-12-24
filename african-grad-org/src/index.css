@@ -8,4 +8,5 @@
 
 body {
   font-family: "Poppins", Times, serif;
+  min-height: 200vh;
 }
