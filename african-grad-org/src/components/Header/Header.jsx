@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Fade from "@mui/material/Fade";
+import { Zoom } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 import agsoLogo from "../../assets/images/agsoLogo.svg";
 import "./Header.css";
@@ -46,11 +48,6 @@ function Header() {
           </div>
 
           {/* DeskTop Navigation */}
-          {/* <nav>
-                        {navItems.map(item => {
-                            return <a key={item.id} href={item.href}> {item.name}</a>
-                        })}
-                    </nav> */}
 
           <nav className="header__nav">
             <Link className="header__nav-link" to="/">
@@ -81,6 +78,10 @@ function Header() {
             className="header__mobile-toggle"
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
+            style={{
+              transition: "transform 0.3s ease",
+              transform: isMenuOpen ? "rotate(180deg)" : "rotate(0deg)",
+            }}
           >
             {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
