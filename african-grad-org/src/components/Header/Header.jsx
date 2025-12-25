@@ -1,9 +1,16 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import Fade from "@mui/material/Fade";
+
 import agsoLogo from "../../assets/images/agsoLogo.svg";
 import "./Header.css";
+import Button from "@mui/material/Button";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const navItems = [
     { id: 1, name: "About", href: "/about" },
     { id: 2, name: "Leadership", href: "/leadership" },
@@ -46,6 +53,9 @@ function Header() {
                     </nav> */}
 
           <nav className="header__nav">
+            <Link className="header__nav-link" to="/">
+              Home
+            </Link>
             {navItems.map((item) => {
               return (
                 <NavLink
@@ -62,12 +72,60 @@ function Header() {
           {/* CTA Button */}
           <div className="header__cta">
             <NavLink to="/contact" className="header__cta-button">
-              {" "}
               Join AGSO
             </NavLink>
           </div>
+
+          {/* ========= Mobile Menu Button=== */}
+          <button
+            className="header__mobile-toggle"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          </button>
         </div>
       </div>
+      {/* =======  --- Mobile Navigation ---- ===== */}
+      <Fade
+        in={isMenuOpen}
+        timeout={{ enter: 200, exit: 200 }}
+        mountOnEnter
+        unmountOnExit
+      >
+        <div className="header__mobile-menu">
+          <nav className="header__mobile-nav">
+            <Link
+              to="/"
+              className="header__mobile-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+
+            {navItems.map((link) => (
+              <NavLink
+                key={link.id}
+                to={link.href}
+                className="header__mobile-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </NavLink>
+            ))}
+
+            <div>
+              <NavLink
+                to="/contact"
+                className="header__mobile-cta"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                JOIN AGSO
+              </NavLink>
+            </div>
+          </nav>
+        </div>
+      </Fade>
     </header>
   );
 }
