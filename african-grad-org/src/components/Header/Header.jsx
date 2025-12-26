@@ -80,7 +80,9 @@ function Header() {
             aria-label="Toggle menu"
             style={{
               transition: "transform 0.3s ease",
-              transform: isMenuOpen ? "rotate(180deg)" : "rotate(0deg)",
+              transform: isMenuOpen
+                ? "rotate(180deg) scale(1.5)"
+                : "rotate(0deg) scale(1.5)",
             }}
           >
             {isMenuOpen ? <CloseIcon /> : <MenuIcon />}

@@ -1,6 +1,6 @@
 /* Header */
 .header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -232,7 +232,7 @@
   top: 100%; /* Position below header */
   left: 0;
   right: 0;
-  background-color: rgba(0, 89, 143, 0.7);
+  background-color: rgba(0, 89, 143, 0.8);
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1rem;
