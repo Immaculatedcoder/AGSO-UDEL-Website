@@ -36,8 +36,8 @@ function Header() {
   ];
 
   return (
-    <header className="header">
-      <div className="container header__container">
+    <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
+      <div className={`container ${scrolled ? "container--scrolled" : ""}`}>
         <div className="header__items">
           {/* Logo and Brand! */}
           <div className="header__logoBrand">
