@@ -13,6 +13,7 @@ import Button from "@mui/material/Button";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   //   Handle Srolling
 
@@ -26,6 +27,10 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []); // We run only on mount once after the page re-renders and all state changes.
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
   const navItems = [
     { id: 1, name: "About", href: "/about" },
