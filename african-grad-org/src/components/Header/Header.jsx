@@ -1,5 +1,5 @@
-import { React, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { React, useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Fade from "@mui/material/Fade";
@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
     { id: 1, name: "About", href: "/about" },
