@@ -57,7 +57,7 @@ function Footer() {
               <a href="#">
                 <InstagramIcon />
               </a>
-              <a href="#">
+              <a href="https://chat.whatsapp.com/IBCGw0bqiWNHk2s3bpAk6E">
                 <WhatsAppIcon />
               </a>
             </div>
