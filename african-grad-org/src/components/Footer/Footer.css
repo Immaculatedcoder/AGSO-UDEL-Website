@@ -100,3 +100,9 @@
 .footer__icons a:hover {
   background-color: rgba(0, 157, 219, 0.32);
 }
+
+.footer__container-divider {
+  border-top: 1px solid rgba(0, 157, 219, 0.701);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
