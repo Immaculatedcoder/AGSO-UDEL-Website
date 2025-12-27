@@ -1,0 +1,74 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #eee;
+  color: #009ddb;
+  border-top: 0.4rem solid #ffd700;
+}
+
+.footer__container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.footer__container-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer__container-top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ======= About ==== */
+.footer-about__container h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+
+.footer-about__container p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: inherit;
+  line-height: 1.625;
+}
+
+/* =========== Quick Links */
+.footer-quickLinks__container h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+
+.footer-quickLinks_subcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-quickLinks_subcontainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-quickLinks__nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-quickLinks__nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Connect ========= */
