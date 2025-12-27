@@ -72,3 +72,31 @@
 }
 
 /* ===== Connect ========= */
+.footer-connect__container h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__icons a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  color: inherit;
+  background-color: rgba(0, 157, 219, 0.121);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.footer__icons a:hover {
+  background-color: rgba(0, 157, 219, 0.32);
+}
