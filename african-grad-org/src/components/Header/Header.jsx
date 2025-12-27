@@ -14,6 +14,19 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  //   Handle Srolling
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 50);
+    }
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // We run only on mount once after the page re-renders and all state changes.
+
   const navItems = [
     { id: 1, name: "About", href: "/about" },
     { id: 2, name: "Leadership", href: "/leadership" },
