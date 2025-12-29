@@ -1,0 +1,38 @@
+/* --------CSS ------- */
+/* Layer - 0 */
+.heroSection {
+  position: relative;
+  min-height: 92vh;
+  overflow: hidden;
+  /* background: #0b1b2b; */
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 60vh;
+  }
+}
+
+/* Layer 1: Image slides */
+.heroSection__image-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 900ms ease;
+  transform: 1600ms ease;
+  will-change: opacity;
+}
+
+/* Layer 3: Dark Overlay */
+.heroSection__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0.473),
+      rgba(0, 0, 0, 0.55)
+    ),
+    linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
+}

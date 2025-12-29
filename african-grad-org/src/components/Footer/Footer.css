@@ -1,13 +1,11 @@
 .footer {
-  position: fixed;
-  bottom: 0;
   background-color: #eee;
   color: #009ddb;
   border-top: 0.4rem solid #ffd700;
 }
 
 .footer__container {
-  max-width: 80rem;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 1.5rem;
