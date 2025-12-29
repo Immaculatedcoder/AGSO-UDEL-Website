@@ -41,7 +41,7 @@ function HeroSection() {
   }
 
   function prev() {
-    setCurrent((prev) => (prev - 1) % slides.length);
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   }
 
   // Auto slide control
