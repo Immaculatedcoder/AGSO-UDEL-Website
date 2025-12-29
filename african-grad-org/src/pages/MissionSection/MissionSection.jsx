@@ -40,7 +40,7 @@ function MissionSection() {
       <div className="mission__container">
         {/* Top Part of the Mission Section */}
         <div className="mission__header">
-          <span>Our Mission</span>
+          <span className="ourMission">Our Mission</span>
           <h2 className="mission__title">
             Empowering African Scholars at Delaware
           </h2>
@@ -55,7 +55,7 @@ function MissionSection() {
         <div className="missionn__values">
           {values.map((value, index) => (
             <div key={value.index} className="mission__value-card">
-              <div>
+              <div className="mission icon">
                 <value.icon />
               </div>
               <h3 className="value-title"> {value.title} </h3>
