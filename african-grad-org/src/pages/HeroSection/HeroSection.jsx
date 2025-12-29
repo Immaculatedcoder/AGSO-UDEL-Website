@@ -79,10 +79,16 @@ function HeroSection() {
       </div>
 
       {/* Layer 5: Previous and Next controls */}
-      <button className="heroSection__control-prev" type="button">
+      <button
+        className="heroSection__control heroSection__control-prev"
+        type="button"
+      >
         <NavigateBeforeIcon />
       </button>
-      <button className="heroSection__control-next" type="button">
+      <button
+        className="heroSection__control heroSection__control-next"
+        type="button"
+      >
         <NavigateNextIcon />
       </button>
 
