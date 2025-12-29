@@ -19,8 +19,7 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: opacity 900ms ease;
-  transform: 1600ms ease;
+  transition: opacity 900ms ease, transform 1600ms ease-in-out;
   will-change: opacity, transform;
 }
 
@@ -216,7 +215,7 @@
 /* Layer 6: Dots Navigation  */
 .heroSection__dots {
   position: absolute;
-  z-index: 3;
+  z-index: 6;
   left: 50%;
   transform: translateX(-50%);
   bottom: 1.25rem;

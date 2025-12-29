@@ -5,9 +5,14 @@ import { NavLink } from "react-router-dom";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import "./HeroSection.css";
+import { useEffect, useState, useRef } from "react";
 
 function HeroSection() {
   // Array of Images and quotes for slideshow
+  const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef(null);
+
   const slides = [
     {
       id: 1,
@@ -27,10 +32,53 @@ function HeroSection() {
     },
   ];
 
-  const current = 0;
+  function goTo(index) {
+    setCurrent(index);
+  }
+
+  function next() {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  }
+
+  function prev() {
+    setCurrent((prev) => (prev - 1) % slides.length);
+  }
+
+  // Auto slide control
+  useEffect(() => {
+    if (isPaused) return;
+
+    intervalRef.current = setInterval(next, 6000);
+    return () => clearInterval(intervalRef.current);
+  }, [isPaused]);
+
+  //   Navigation Key
+
+  function onKeyDown(arrow) {
+    if (arrow.key === "ArrowRight") {
+      next();
+    }
+    if (arrow.key === "ArrowLeft") {
+      prev();
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   const activeSlides = slides[current];
   return (
-    <section className="heroSection">
+    <section
+      className="heroSection"
+      aria-label="AGSO hero slideshow"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+    >
       {/* Hero section-with slideshow background */}
       {/* Layer 1: Background Images */}
       {slides.map((slide, index) => (
@@ -41,6 +89,7 @@ function HeroSection() {
             backgroundImage: `url(${slide.image})`,
             backgroundRepeat: "no-repeat",
             opacity: index === current ? 1 : 0,
+            transform: index === current ? "scale(1)" : "scale(1.03)",
           }}
         />
       ))}
@@ -82,12 +131,14 @@ function HeroSection() {
       <button
         className="heroSection__control heroSection__control-prev"
         type="button"
+        onClick={prev}
       >
         <NavigateBeforeIcon />
       </button>
       <button
         className="heroSection__control heroSection__control-next"
         type="button"
+        onClick={next}
       >
         <NavigateNextIcon />
       </button>
@@ -101,6 +152,8 @@ function HeroSection() {
               i === current ? "heroSection__dot-active" : ""
             }`}
             type="button"
+            role="tab"
+            onClick={() => goTo(i)}
           />
         ))}
       </div>
