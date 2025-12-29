@@ -95,8 +95,9 @@
 .heroSection__button--primary {
   /* Variables */
   --bg: #ffd700;
-  --hover-bg: #ffef96;
+  --hover-bg: #fcea85;
   --hover-text: #00324d;
+  --hover-color: #d4c468;
 
   /* Default state*/
   color: #00598f;
@@ -106,13 +107,13 @@
   padding: 0.5rem 1.5rem;
   background: var(--bg);
   transition: 0.2s;
-}
-
-.heroSection__button--primary:hover {
-  color: var(--hover-text);
   transform: translate(0rem, -0.25rem);
   background: var(--hover-bg);
   box-shadow: 0rem 0.25rem var(--bg);
+}
+
+.heroSection__button--primary:hover {
+  background: var(--hover-color);
 }
 
 .heroSection__button--primary:active {
@@ -127,22 +128,23 @@
   --bg: #00598f;
   --hover-bg: #8ed4ff;
   --hover-text: #00324d;
+  --hover-color: #689cbd;
 
   /* Default state*/
-  color: #fff;
+  color: var(--hover-text);
   cursor: pointer;
   border: 1px solid var(--bg);
   border-radius: 4px;
   padding: 0.5rem 1.5rem;
   background: var(--bg);
   transition: 0.2s;
-}
-
-.heroSection__button--secondary:hover {
-  color: var(--hover-text);
   transform: translate(0rem, -0.25rem);
   background: var(--hover-bg);
   box-shadow: 0rem 0.25rem var(--bg);
+}
+
+.heroSection__button--secondary:hover {
+  background-color: var(--hover-color);
 }
 
 .heroSection__button--secondary:active {
