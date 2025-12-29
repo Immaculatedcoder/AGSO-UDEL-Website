@@ -214,3 +214,28 @@
 }
 
 /* Layer 6: Dots Navigation  */
+.heroSection__dots {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.heroSection__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(225, 225, 225, 0.25);
+  cursor: pointer;
+  padding: 0;
+  transition: all 150ms ease;
+}
+
+.heroSection__dot-active {
+  border-color: rgba(255, 215, 0, 0.9);
+  background: rgba(255, 215, 0, 0.9);
+}
