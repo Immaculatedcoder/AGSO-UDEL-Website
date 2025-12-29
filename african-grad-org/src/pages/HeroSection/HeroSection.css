@@ -21,18 +21,131 @@
   background-position: center;
   transition: opacity 900ms ease;
   transform: 1600ms ease;
-  will-change: opacity;
+  will-change: opacity, transform;
 }
 
-/* Layer 3: Dark Overlay */
+/* Layer 2: Dark Overlay */
 .heroSection__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: radial-gradient(
       50% 50% at 50% 50%,
-      rgba(0, 0, 0, 0.473),
-      rgba(0, 0, 0, 0.55)
+      rgba(0, 0, 0, 0.297),
+      rgba(0, 0, 0, 0.345)
     ),
-    linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
+    linear-gradient(to top, rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.084));
+}
+
+/* Layer 3: Main Content */
+.heroSection__content {
+  position: relative;
+  z-index: 2;
+  height: 92vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 2rem 1.25rem;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .heroSection__content {
+    height: 60vh;
+  }
+}
+
+.heroSection__title {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.heroSection__description {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.heroSection__buttons {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.heroSection__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Primary Button */
+
+.heroSection__button--primary {
+  /* Variables */
+  --bg: #ffd700;
+  --hover-bg: #ffef96;
+  --hover-text: #00324d;
+
+  /* Default state*/
+  color: #00598f;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.heroSection__button--primary:hover {
+  color: var(--hover-text);
+  transform: translate(0rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0rem 0.25rem var(--bg);
+}
+
+.heroSection__button--primary:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* Secondary button */
+
+.heroSection__button--secondary {
+  /* Variables */
+  --bg: #00598f;
+  --hover-bg: #8ed4ff;
+  --hover-text: #00324d;
+
+  /* Default state*/
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.heroSection__button--secondary:hover {
+  color: var(--hover-text);
+  transform: translate(0rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0rem 0.25rem var(--bg);
+}
+
+.heroSection__button--secondary:active {
+  transform: translate(0);
+  box-shadow: none;
 }

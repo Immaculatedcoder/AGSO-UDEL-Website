@@ -54,7 +54,7 @@ function Footer() {
           <div className="footer-connect__container">
             <h3> Connect With Us</h3>
             <div className="footer__icons">
-              <a href="#">
+              <a href="https://www.instagram.com/ud_agso?igsh=dWkyMGpxamdlc2N6">
                 <InstagramIcon />
               </a>
               <a href="https://chat.whatsapp.com/IBCGw0bqiWNHk2s3bpAk6E">
