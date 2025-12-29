@@ -58,10 +58,16 @@ function HeroSection() {
           the University of Delaware.
         </p>
         <div className="heroSection__buttons">
-          <NavLink className="heroSection__button heroSection__button--primary">
+          <NavLink
+            to="/contact"
+            className="heroSection__button heroSection__button--primary"
+          >
             Join US
           </NavLink>
-          <NavLink className="heroSection__button heroSection__button--secondary">
+          <NavLink
+            to="/events"
+            className="heroSection__button heroSection__button--secondary"
+          >
             View Events
           </NavLink>
         </div>
