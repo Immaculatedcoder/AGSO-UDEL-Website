@@ -101,3 +101,37 @@
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.9);
   transform: translate(-0.25rem, -0.25rem);
 }
+
+.mission__icons {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgb(255, 255, 240);
+  border-radius: 0.75rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform 200ms ease;
+}
+
+.mission__icons:hover {
+  transform: scale(1.1);
+}
+
+.mission__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.value-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.value-description {
+  color: #475569;
+  line-height: 1.625;
+}
