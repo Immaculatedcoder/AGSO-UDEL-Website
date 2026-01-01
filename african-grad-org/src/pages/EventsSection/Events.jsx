@@ -94,7 +94,7 @@ function Events() {
         {/* View All Events */}
         <div className="events__cta">
           <button className="event__btn btn-primary btn-lg">
-            View All Events
+            View All Events e
           </button>
         </div>
       </div>
