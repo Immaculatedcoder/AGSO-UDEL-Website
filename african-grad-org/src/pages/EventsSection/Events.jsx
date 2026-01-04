@@ -52,7 +52,7 @@ function Events() {
         </div>
 
         {/* Events Snippet */}
-        <div className="events__container">
+        <div className="events__container-upcomingevent">
           {events.map((item) => (
             <div
               key={item.id}
@@ -61,9 +61,7 @@ function Events() {
               {item.featured && (
                 <div className="event-badge">Featured Event</div>
               )}
-              <div className="event__header">
-                <h3 className="event-title"> {item.title}</h3>
-              </div>
+              <h3 className="event-title"> {item.title}</h3>
               <div className="event-content">
                 <p className="event-description"> {item.description}</p>
 
@@ -83,7 +81,7 @@ function Events() {
                 </div>
 
                 <button className="event__btn">
-                  Learn More
+                  <span>Learn More </span>
                   <ArrowRightAltIcon />
                 </button>
               </div>
@@ -94,7 +92,7 @@ function Events() {
         {/* View All Events */}
         <div className="events__cta">
           <button className="event__btn btn-primary btn-lg">
-            View All Events. HAPPY
+            <span>View All Events.</span>
           </button>
         </div>
       </div>
