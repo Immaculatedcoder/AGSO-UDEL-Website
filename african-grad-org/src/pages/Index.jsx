@@ -1,6 +1,7 @@
 import HeroSection from "./HeroSection/HeroSection";
 import MissionSection from "./MissionSection/MissionSection";
 import Events from "./EventsSection/Events";
+import Leadership from "./LeadershipSection/Leadership";
 
 function Index() {
   return (
@@ -9,6 +10,7 @@ function Index() {
         <HeroSection />
         <MissionSection />
         <Events />
+        <Leadership />
         {/* Section 3 */}
       </main>
     </div>
