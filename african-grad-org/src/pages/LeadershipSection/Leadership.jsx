@@ -20,7 +20,7 @@ function Leadership() {
           </p>
         </div>
 
-        {/* Down parts: Leaders card */}
+        {/* Down parts: Leaders card then */}
         <div className="leaders__container"></div>
       </div>
     </section>
