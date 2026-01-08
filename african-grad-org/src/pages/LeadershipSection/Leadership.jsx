@@ -16,7 +16,7 @@ function Leadership() {
           <h2 className="leadership__title">Our Leadership</h2>
           <p className="leadership__description">
             Meet the dedicated team working to make AGSO a virbrant and
-            supportive community for all African graduate students.
+            supportive community for all African graduate students. ss
           </p>
         </div>
 
@@ -28,4 +28,3 @@ function Leadership() {
 }
 
 export default Leadership;
-t;
