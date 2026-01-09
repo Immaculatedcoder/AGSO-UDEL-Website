@@ -54,7 +54,7 @@ function MissionSection() {
         {/* Down part of the mission section */}
         <div className="missionn__values">
           {values.map((value, index) => (
-            <div key={value.index} className="mission__value-card">
+            <div key={index} className="mission__value-card">
               <div className="mission__icons">
                 <value.icon className="mission__icon" />
               </div>
