@@ -33,3 +33,7 @@
 /* Left Part */
 
 /* Right Part */
+.Contact__container-right {
+  background-color: #bdbdbd;
+  border-radius: 0.25rem;
+}
