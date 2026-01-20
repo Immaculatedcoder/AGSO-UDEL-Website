@@ -12,7 +12,7 @@ function Index() {
         <MissionSection />
         <Events />
         <Leadership />
-        {/* Section 3 */}
+        <Contact />
       </main>
     </div>
   );
