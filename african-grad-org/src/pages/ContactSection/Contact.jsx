@@ -21,7 +21,7 @@ function Contact() {
             </p>
           </div>
           <div className="connect__withUS">
-            <div className="connect__withUS-WhatsApp">
+            <div className="connect__withUS-Social">
               <a href="https://chat.whatsapp.com/IBCGw0bqiWNHk2s3bpAk6E">
                 <WhatsAppIcon />
               </a>
@@ -33,7 +33,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="connect__withUS-Instagram">
+            <div className="connect__withUS-Social">
               <a href="https://www.instagram.com/ud_agso?igsh=dWkyMGpxamdlc2N6">
                 <InstagramIcon />
               </a>
@@ -44,7 +44,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="connect__withUS-Location">
+            <div className="connect__withUS-Social">
               <a>
                 <LocationOnIcon />
               </a>

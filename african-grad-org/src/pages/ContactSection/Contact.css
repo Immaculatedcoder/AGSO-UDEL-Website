@@ -26,11 +26,62 @@
   .Contact__container {
     padding-left: 2rem;
     padding-right: 2rem;
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns: 0.9fr 0.7fr;
   }
 }
 
 /* Left Part */
+.Contact__container-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #ffffff;
+}
+
+.Contact__container-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Contact__container-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.Contact__container-title span {
+  color: #ffd200;
+}
+
+.connect__withUS {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.connect__withUS-Social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connect__withUS-Social a {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-content: center;
+  justify-content: center;
+  color: #ffd200;
+}
+
+.connect__withUS-Social a svg {
+  transform: scale(1.5);
+}
+
+.connect__withUS-Social div p:first-child {
+  color: #bdbdbd;
+  line-height: 1.25;
+}
 
 /* Right Part */
 .Contact__container-right {
