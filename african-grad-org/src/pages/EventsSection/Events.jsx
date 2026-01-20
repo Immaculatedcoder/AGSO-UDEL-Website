@@ -54,10 +54,7 @@ function Events() {
         {/* Events Snippet */}
         <div className="events__container-upcomingevent">
           {events.map((item) => (
-            <div
-              key={item.id}
-              className={`event-card ${item.featured ? "featured" : ""}`}
-            >
+            <div key={item.id} className="event-card">
               {item.featured && (
                 <div className="event-badge">Featured Event</div>
               )}

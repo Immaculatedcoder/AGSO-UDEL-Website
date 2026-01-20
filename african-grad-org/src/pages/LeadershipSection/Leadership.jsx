@@ -1,5 +1,7 @@
 import "./Leadership.css";
 import LS1 from "../../assets/images/LS1.png";
+import { NavLink } from "react-router-dom";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const LeadersProfile = [
   {
@@ -29,7 +31,7 @@ function Leadership() {
   return (
     <section className="LeadershipSection">
       <div className="leadership__container">
-        {/* Top part if the leadership section */}
+        {/* Top part of the leadership section */}
         <div className="leadership__header">
           <h2 className="leadership__title">Our Leadership</h2>
           <p className="leadership__description">
@@ -49,7 +51,7 @@ function Leadership() {
                   backgroundRepeat: "no-repeat",
                 }}
               />
-              <div className="Leader__info">
+              <div className="leader__info">
                 <h3> {leader.name}</h3>
 
                 <p> {leader.role}</p>
@@ -58,6 +60,13 @@ function Leadership() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View All button */}
+        <div className="leaders__view-all">
+          <NavLink>
+            View Full Leadership Team <ArrowRightAltIcon />
+          </NavLink>
         </div>
       </div>
     </section>
