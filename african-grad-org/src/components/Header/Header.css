@@ -11,9 +11,24 @@
   display: block;
 }
 
+@media (max-width: 640px) {
+  .header {
+    background-color: #00539f;
+    border-bottom: 0.125rem solid #ffd200;
+  }
+}
+
 /* When scrolled */
+@media (min-width: 640px) {
+  .header--scrolled {
+    background-color: #00539f;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
 .header--scrolled {
-  background-color: rgba(0, 89, 143, 1);
+  background-color: #00539f;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
