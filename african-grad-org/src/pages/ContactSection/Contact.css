@@ -4,3 +4,32 @@
 
   background-color: #00539f;
 }
+
+.Contact__container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .Contact__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Contact__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    grid-template-columns: 1fr 0.8fr;
+  }
+}
+
+/* Left Part */
+
+/* Right Part */
