@@ -47,7 +47,7 @@
   }
 
   .header--scrolled {
-    border-bottom: 0.4rem solid #ffd700;
+    border-bottom: 0.2rem solid #ffd200;
   }
 }
 
@@ -64,7 +64,7 @@
 }
 
 .container--scrolled {
-  border-bottom: 0.4rem solid #ffd700;
+  border-bottom: 0.2rem solid #ffd200;
 }
 
 /* --- Responsive to potrait Tablet */
@@ -241,16 +241,16 @@
   --hover-color: #d4c468;
 
   /* Default state*/
-  color: #00598f;
+  color: #00539f;
   cursor: pointer;
   border: 1px solid var(--bg);
   border-radius: 4px;
   padding: 0.5rem 1.5rem;
-  background: var(--bg);
+  /* background: var(--bg); */
   transition: 0.2s;
   transform: translate(0rem, -0.25rem);
-  background: var(--hover-bg);
-  box-shadow: 0rem 0.25rem var(--bg);
+  background: #ffd200;
+  box-shadow: 0rem 0.125rem var(--bg);
 }
 
 .header__cta-button:hover {
