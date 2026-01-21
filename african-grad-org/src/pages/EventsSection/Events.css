@@ -1,4 +1,14 @@
 .eventsSection {
+  --primary1: #ffd200;
+  --primary2: #00539f;
+  --secondary1: #003c71;
+  --secondary2: #bdbdbd;
+  --secondary3: #000000;
+  --secondary4: #eee8c5;
+  --secondary5: #00a0df;
+  --secondary6: #ffffff;
+  --secondary7: #333;
+  --secondary8: rgba(0, 0, 0, 0.7);
   padding-top: 6rem;
   padding-bottom: 6rem;
   background-color: #eee8c5;
