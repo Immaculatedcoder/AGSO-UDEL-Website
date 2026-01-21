@@ -108,7 +108,7 @@
   transition: 0.2s;
   transform: translate(0rem, -0.25rem);
   background: var(--hover-bg);
-  box-shadow: 0rem 0.25rem var(--bg);
+  box-shadow: 0rem 0.125rem var(--bg);
 }
 
 .heroSection__button--primary:hover {
@@ -139,7 +139,7 @@
   transition: 0.2s;
   transform: translate(0rem, -0.25rem);
   background: var(--hover-bg);
-  box-shadow: 0rem 0.25rem var(--bg);
+  box-shadow: 0rem 0.125rem var(--bg);
 }
 
 .heroSection__button--secondary:hover {
