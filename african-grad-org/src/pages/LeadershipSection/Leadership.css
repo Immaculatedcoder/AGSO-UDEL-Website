@@ -1,7 +1,17 @@
 .LeadershipSection {
+  --primary1: #ffd200;
+  --primary2: #00539f;
+  --secondary1: #003c71;
+  --secondary2: #bdbdbd;
+  --secondary3: #000000;
+  --secondary4: #eee8c5;
+  --secondary5: #00a0df;
+  --secondary6: #ffffff;
+  --secondary7: #333;
+  --secondary8: rgba(0, 0, 0, 0.7);
   padding-top: 6rem;
   padding-bottom: 3rem;
-  background-color: #e7e7e7;
+  background-color: var(--secondary6);
 }
 
 /* --- Container for Items */
@@ -32,7 +42,7 @@
   max-width: 48rem;
   margin: 0 auto auto;
   margin-bottom: 4rem;
-  background-color: #eee8c5;
+  background-color: var(--primary1);
   border-radius: 5px;
   border: 1px solid black;
   padding: 1rem;
@@ -41,7 +51,7 @@
 .leadership__title {
   font-size: 1.875rem;
   font-weight: 600;
-  color: black;
+  color: var(--secondary7);
   margin-top: 1.5rem;
 }
 
@@ -53,7 +63,7 @@
 
 .leadership__description {
   font-size: 1.125rem;
-  color: black;
+  color: var(--secondary8);
   line-height: 1.625;
 }
 
