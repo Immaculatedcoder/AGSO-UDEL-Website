@@ -11,7 +11,7 @@
   --secondary8: rgba(0, 0, 0, 0.7);
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: #eee8c5;
+  background-color: var(--secondary6);
 }
 
 /* --- Container for Items ---- */
