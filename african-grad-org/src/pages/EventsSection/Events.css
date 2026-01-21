@@ -11,7 +11,7 @@
   --secondary8: rgba(0, 0, 0, 0.7);
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: var(--secondary6);
+  background-color: var(--primary2);
 }
 
 /* --- Container for Items ---- */
@@ -46,7 +46,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4rem;
-  background-color: #fff8f8;
+  background-color: var(--secondary6);
   border-radius: 5px;
   border: 1px solid black;
   padding: 1rem;
@@ -55,8 +55,12 @@
 .events__title {
   font-size: 1.875rem;
   font-weight: 600;
-  color: #000000;
+  color: var(--secondary3);
   margin-top: 1.5rem;
+}
+
+.events__title span {
+  color: var(--primary2);
 }
 
 @media (min-width: 640px) {
@@ -67,7 +71,7 @@
 
 .events__description {
   font-size: 1.125rem;
-  color: #000000;
+  color: var(--secondary3);
   line-height: 1.625;
 }
 
@@ -108,7 +112,7 @@
   position: relative;
   display: grid;
   gap: 0.5rem;
-  background-color: #fffcedda;
+  background-color: var(--secondary6);
   border-radius: 10px;
   padding: 2rem;
   height: 100%;
@@ -125,7 +129,7 @@
   border: 1px solid black;
   border-top: none;
   border-radius: 0 0 5px 5px;
-  background: #00a0df3d;
+  background: var(--secondary2);
 
   padding: 0.2rem 1rem;
 }
@@ -138,7 +142,7 @@
 
 .event-description {
   font-size: 1.125rem;
-  color: #475569;
+  color: var(--secondary1);
   line-height: 1.625;
 }
 
