@@ -98,7 +98,7 @@ function Contact() {
               />
             </div>
             <button type="submit" className="btn-submit">
-              Send Message <SendIcon />
+              <p>Send Message</p> <SendIcon />
             </button>
           </form>
         </div>
