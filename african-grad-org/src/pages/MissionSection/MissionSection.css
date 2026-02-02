@@ -82,8 +82,9 @@
 
 /* ==========----- Buttom -------======== */
 .missionn__values {
+  position: relative;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 @media (min-width: 640px) {
@@ -99,6 +100,9 @@
 }
 
 .mission__value-card {
+  position: sticky;
+  top: 20%;
+
   background-color: var(--secondary4);
   border-radius: 9px;
   padding: 2rem;
@@ -107,9 +111,11 @@
   transition: all 300ms ease;
 }
 
-.mission__value-card:hover {
-  box-shadow: 4px 4px 0px 0px var(--secondary3);
-  transform: translate(-0.25rem, -0.25rem);
+@media (min-width: 1024px) {
+  .mission__value-card:hover {
+    box-shadow: 4px 4px 0px 0px var(--secondary3);
+    transform: translate(-0.25rem, -0.25rem);
+  }
 }
 
 .mission__icons {

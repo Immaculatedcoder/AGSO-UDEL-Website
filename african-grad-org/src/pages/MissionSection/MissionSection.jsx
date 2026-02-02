@@ -3,38 +3,63 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LightbulbOutlineIcon from "@mui/icons-material/LightbulbOutline";
 import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
 import LanguageIcon from "@mui/icons-material/Language";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
 
+const values = [
+  {
+    icon: FavoriteBorderIcon,
+    title: "Community",
+    description:
+      "Creating a supportive network where African graduate students can feel at home",
+    color: {},
+  },
+  {
+    icon: LightbulbOutlineIcon,
+    title: "Excellence",
+    description:
+      "Inspiring academic and professional excellence through mentorship and collaboration",
+    color: {},
+  },
+  {
+    icon: PeopleOutlineIcon,
+    title: "Unity",
+    description:
+      "Bidging diverse African cultures and fostering lasting friendships accross the continent",
+    color: {},
+  },
+  {
+    icon: LanguageIcon,
+    title: "Impact",
+    description:
+      "Making meaningful contributions to our university and the broader commnunity",
+    color: {},
+  },
+];
+
+gsap.registerPlugin(ScrollTrigger);
 function MissionSection() {
-  const values = [
-    {
-      icon: FavoriteBorderIcon,
-      title: "Community",
-      description:
-        "Creating a supportive network where African graduate students can feel at home",
-      color: {},
-    },
-    {
-      icon: LightbulbOutlineIcon,
-      title: "Excellence",
-      description:
-        "Inspiring academic and professional excellence through mentorship and collaboration",
-      color: {},
-    },
-    {
-      icon: PeopleOutlineIcon,
-      title: "Unity",
-      description:
-        "Bidging diverse African cultures and fostering lasting friendships accross the continent",
-      color: {},
-    },
-    {
-      icon: LanguageIcon,
-      title: "Impact",
-      description:
-        "Making meaningful contributions to our university and the broader commnunity",
-      color: {},
-    },
-  ];
+  useEffect(() => {
+    const cards = gsap.utils.toArray(".mission__value-card");
+
+    cards.forEach((card, index) => {
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 20%",
+          end: "bottom 20%",
+          scrub: 0.5,
+          markers: false,
+        },
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <section className="missionSection">
       <div className="mission__container">
