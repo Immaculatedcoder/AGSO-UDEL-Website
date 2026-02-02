@@ -88,6 +88,9 @@ function HeroSection() {
           style={{
             backgroundImage: `url(${slide.image})`,
             backgroundRepeat: "no-repeat",
+            backgroundSize: "cover", // makes it fill the container in HD
+            backgroundPosition: "center", // prevents stretching
+            imageRendering: "auto", // ensures smooth HD rendering
             opacity: index === current ? 1 : 0,
             transform: index === current ? "scale(1)" : "scale(1.03)",
           }}

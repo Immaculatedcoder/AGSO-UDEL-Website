@@ -31,12 +31,15 @@
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(
+    /* radial-gradient(
       50% 50% at 50% 50%,
       rgba(0, 0, 0, 0.148),
       rgba(0, 0, 0, 0.137)
-    ),
-    linear-gradient(to top, rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.084));
+    ), */ linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 /* Layer 3: Main Content */
@@ -55,7 +58,7 @@
 
 @media (max-width: 768px) {
   .heroSection__content {
-    height: 60vh;
+    height: 75vh;
   }
 }
 
@@ -74,7 +77,8 @@
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.5;
   max-width: 850px;
-  margin: 0 auto;
+  margin-top: 15rem;
+  /* margin: 0 auto; */
 }
 
 .heroSection__buttons {
