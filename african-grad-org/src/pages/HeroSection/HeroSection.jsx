@@ -99,13 +99,15 @@ function HeroSection() {
 
       {/*Layer 3: Main Content */}
       <div className="heroSection__content">
-        <h2 className="heroSection__title">
+        {/* <h2 className="heroSection__title">
           African Graduate Student Organization
-        </h2>
+        </h2> */}
         <p className="heroSection__description">
           Building community, culture, and support African graduate students at
           the University of Delaware.
         </p>
+
+        {/* ----- To be reviewed ---- */}
         <div className="heroSection__buttons">
           <NavLink
             to="/contact"
@@ -113,12 +115,12 @@ function HeroSection() {
           >
             Join US
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/events"
             className="heroSection__button heroSection__button--secondary"
           >
             View Events
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
 

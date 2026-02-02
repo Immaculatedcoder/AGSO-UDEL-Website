@@ -6,7 +6,7 @@ import Fade from "@mui/material/Fade";
 import { Zoom } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import agsoLogo from "../../assets/images/agsoLogo.svg";
+import agsoLogo from "../../assets/images/agsoLogo5.svg";
 import "./Header.css";
 import Button from "@mui/material/Button";
 
